@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "my-python-uniq"
+version = "0.1.0"
+authors = [
+  { name="Анастасія", email="trushchaknastya@gmail.com" },
+]
+description = "Реалізація команди uniq на Python за допомогою Click."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Utilities",
+]
+dependencies = [
+    "click>=8.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/anastasiatrushchak/my-python-uniq"
+Issues = "https://github.com/anastasiatrushchak/my-python-uniq/issues"
+
+[project.scripts]
+myuniq = "myuniq.cli:main"
