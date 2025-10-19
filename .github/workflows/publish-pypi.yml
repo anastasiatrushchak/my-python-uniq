@@ -7,9 +7,9 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    permissions:
-      id-token: write # Потрібно для "trusted publishing"
-      
+    
+    # Блок 'permissions' тут не потрібен, оскільки ми використовуємо токен
+
     steps:
       - uses: actions/checkout@v4
 
@@ -28,7 +28,7 @@ jobs:
 
       - name: Publish package to PyPI
         uses: pypa/gh-action-pypi-publish@v1.9.0
-        
         with:
-          user: __token__
+          # 'user: __token__' більше не потрібен для нових версій action
+          # Головне - це сам пароль (токен)
           password: ${{ secrets.PYPI_API_TOKEN }}
