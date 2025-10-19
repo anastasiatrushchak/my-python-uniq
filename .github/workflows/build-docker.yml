@@ -32,4 +32,4 @@ jobs:
           # Push спрацює тільки при створенні тегу
           push: ${{ github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v') }}
           # Замініть 'your-docker-user' на ваш логін в Docker Hub
-          tags: your-docker-user/myuniq:latest, your-docker-user/myuniq:${{ github.ref_name }}
+          tags: anastasiia1801/myuniq:latest, anastasiia1801/myuniq:${{ github.ref_name }}
