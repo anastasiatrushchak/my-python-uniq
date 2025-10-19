@@ -28,5 +28,7 @@ jobs:
 
       - name: Publish package to PyPI
         uses: pypa/gh-action-pypi-publish@v1.9.0
-        # Не потрібен API_TOKEN, якщо ви налаштували "Trusted Publishing" на PyPI
-        password: ${{ secrets.PYPI_API_TOKEN }}
+        
+        with:
+          user: __token__
+          password: ${{ secrets.PYPI_API_TOKEN }}
